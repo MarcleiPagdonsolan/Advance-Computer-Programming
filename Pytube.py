@@ -1,9 +1,7 @@
 from tkinter import *
 from tkinter import filedialog
-from tkinter import messagebox
-from tkinter import youtube
- 
- 
+from tkinter import messagebox 
+
 def click_download():
     if getURL.get() == "":
         messagebox.showinfo("ERROR", "ENTER URL ")
@@ -66,10 +64,10 @@ root.configure(bg="#B2BEB5")
 root.resizable(False, False)
  
 #Set Labels
-headLabel     = Label(root, bg = "#525252", fg="#8C0000", text="PyTube",  font=("Verdana", 25)).grid(row=0, column=1, padx=10, pady=10)
-urlLabel      = Label(root, bg = "#525252", text="URL:",            font=("Verdana", 13)).grid(row=1, column=0, padx=10, pady=10)
-qualityLabel  = Label(root, bg = "#525252", text="SELECT QUALITY",  font=("Verdana", 13)).grid(row=2, column=0, padx=10, pady=10)
-locLabel      = Label(root, bg = "#525252", text="LOCATION",        font=("Verdana", 13)).grid(row=3, column=0, padx=10, pady=10)
+headLabel     = Label(root, bg = "#B2BEB5", fg="#8C0000", text="PyTube",  font=("Rockwell", 30)).grid(row=0, column=1, padx=10, pady=10)
+urlLabel      = Label(root, bg = "#B2BEB5", text="URL:",            font=("Verdana", 13)).grid(row=1, column=0, padx=10, pady=10)
+qualityLabel  = Label(root, bg = "#B2BEB5", text="SELECT QUALITY",  font=("Verdana", 13)).grid(row=2, column=0, padx=10, pady=10)
+locLabel      = Label(root, bg = "#B2BEB5", text="LOCATION",        font=("Verdana", 13)).grid(row=3, column=0, padx=10, pady=10)
  
 #Get Input
 getURL = StringVar()
@@ -84,12 +82,11 @@ listbox= Listbox(root, font=("Century Gothic", 11), bg= '#D9C6A5', width=56, hei
 listbox.grid(row=2, column=1, padx=10, pady=10)
  
 #Buttons
-confirmButton  = Button(root, text= "CONFIRM URL", bg= '#8C0000', activebackground='#B4E197', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=confirm_URL).grid(row=1, column=2, padx=10, pady=10)
-browseButton   = Button(root, text= "BROWSE", bg= '#8C0000', activebackground='#B4E197', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=browse).grid(row=3, column=2, padx=10, pady=10)
-downloadButton = Button(root, text= "DOWNLOAD", bg= '#8C0000', activebackground='#B4E197', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=click_download).grid(row=4, column=1, padx=10, pady=10)
-clearallButton = Button(root, text= "CLEAR ALL", bg= '#8C0000', activebackground='#B4E197', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=clear_all).grid(row=4, column=2, padx=10, pady=10)
+confirmButton  = Button(root, text= "CONFIRM URL", bg= '#FFCCCB', activebackground='#FFCCCB', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=confirm_URL).grid(row=1, column=2, padx=10, pady=10)
+browseButton   = Button(root, text= "BROWSE", bg= '#FFCCCB', activebackground='#B4E197', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=browse).grid(row=3, column=2, padx=10, pady=10)
+downloadButton = Button(root, text= "DOWNLOAD", bg= '#FFCCCB', activebackground='#FFCCCB', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=click_download).grid(row=4, column=1, padx=10, pady=10)
+clearallButton = Button(root, text= "CLEAR ALL", bg= '#FFCCCB', activebackground='#B4E197', font=("Century Gothic", 10), width=15, relief=RAISED, borderwidth=1, command=clear_all).grid(row=4, column=2, padx=10, pady=10)
  
  
 #Set an infinite loop so window stays in view
 root.mainloop()
-
